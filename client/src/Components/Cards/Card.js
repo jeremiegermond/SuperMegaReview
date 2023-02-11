@@ -9,7 +9,10 @@ export default function Card() {
       </div>
       <div className="bottom-card">
         <p className="bottom-title">Title</p>
-        <p>Rating: 4.5<FaStar className="card-star" /></p>
+        <div className="bottom-rating">
+          <p>Rating: </p>
+          <p>4.5<FaStar className="card-star" /></p>
+        </div>
       </div>
     </div>
   )
