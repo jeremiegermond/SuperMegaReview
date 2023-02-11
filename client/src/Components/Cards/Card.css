@@ -1,0 +1,30 @@
+.card {
+    width: 20%;
+    height: 45vh;
+    border: 1px solid red;
+}
+
+.top-card {
+    height: 85%;
+    width: 100%;
+}
+
+.top-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bottom-card {
+    height: 15%;
+    background: white;
+    -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+    z-index: 10;
+}
+
+.card-star {
+    color: #FFD700;
+}

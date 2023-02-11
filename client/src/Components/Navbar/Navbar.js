@@ -6,6 +6,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <nav>
+        <img alt="logo" src="/logo.png" />
         <header>
           <div className="nav">
             <div className="nav-items">

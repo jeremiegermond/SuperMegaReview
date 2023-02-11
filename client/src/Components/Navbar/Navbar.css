@@ -1,9 +1,23 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav header {
+    width: 80%;
+}
+
+nav img {
+    width: 20%;
+}
+
 .nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 60%;
-    margin-left: 20%;
+    margin-left: 10%;
     height: 7vh;
 }
 
@@ -19,13 +33,16 @@ nav * {
 }
 
 .nav-items {
-    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .nav-items ul {
     display: flex;
-    align-items: row;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
     list-style: none;
     color: White;
 }
@@ -33,14 +50,4 @@ nav * {
 header a {
     text-decoration: none;
     color: rgb(238, 255, 0);
-}
-
-.nav-logo {
-    width: 50px;
-    height: 50px;
-}
-
-.members {
-    font-size: 18px;
-    color: rgb(196, 153, 36);
 }
