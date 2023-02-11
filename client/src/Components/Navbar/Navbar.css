@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-left: 20%;
+    height: 7vh;
+}
+
+.nav-link {
+    font-size: 22px;
+    color: white;
+}
+
+nav * {
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.nav-items {
+    width: 50%;
+}
+
+.nav-items ul {
+    display: flex;
+    align-items: row;
+    justify-content: space-around;
+    list-style: none;
+    color: White;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(238, 255, 0);
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.members {
+    font-size: 18px;
+    color: rgb(196, 153, 36);
+}

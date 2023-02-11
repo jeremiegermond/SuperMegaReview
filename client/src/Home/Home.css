@@ -1,0 +1,39 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-title {
+    margin: 5%;
+}
+
+.home-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.game-image {
+    width: 45%;
+    border: 1px solid red;
+    height: 50vh;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.game-image:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.game-writing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    height: 50vh;
+}
