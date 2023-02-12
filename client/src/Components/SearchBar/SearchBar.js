@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./SearchBar.css"
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -9,12 +10,13 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form>
+    <form className="search">
       <input
+        className="bar"
         type="text"
         value={searchTerm}
         onChange={handleChange}
-        placeholder="Search..."
+        placeholder="Search a movie..."
       />
     </form>
   );
