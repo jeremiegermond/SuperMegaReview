@@ -1,0 +1,7 @@
+.commentary {
+    width: 100%;
+    height: 60px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
