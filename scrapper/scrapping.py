@@ -8,10 +8,9 @@ def get_html(start):
     return BeautifulSoup(html, 'html.parser')
 
 
-def parse_data(html_parsed):
+def parse_data(html_parsed, count):
     all_data = []
     list = html_parsed.find("div", {"class": "lister-list"})
-    count = 0
     for movie in list.find_all("div"):
         try:
             certificate = movie.find("span", {"class": "certificate"}).text.strip()
@@ -31,6 +30,7 @@ def parse_data(html_parsed):
                     else:
                         Stars += f"{a.text} "
             dict_movie = {
+                "id" : count,
                 "certificate": certificate,
                 "runtime": runtime,
                 "genre": genre,
@@ -46,15 +46,17 @@ def parse_data(html_parsed):
             print(f"{count} movie extracted.")
         except:
             continue
-    return all_data
+    return all_data, count
         
         
 
 def scrape():
     all_pages = []
+    count = 0
     for a in range(0, 300, 100):
         html_parsed = get_html(a)
-        all_pages += parse_data(html_parsed)
+        current_page, count = parse_data(html_parsed, count)
+        all_pages += current_page
     with open("scrapped_data.json", 'w') as scp_data:
             json.dump(all_pages, scp_data, ensure_ascii=True)
 
