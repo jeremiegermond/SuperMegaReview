@@ -18,6 +18,28 @@ export default function CardDetail() {
       .catch((err) => console.log(err));
   }, [id]);
 
+  const [author, setAuthor] = useState("");
+  const [review, setReview] = useState("");
+
+  const addCommentary = (e) => {
+    e.preventDefault();
+    const commentary = { id, author, review};
+     fetch(`/api/commentaries`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(commentary),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setCommentaries([...commentaries, data]);
+        setAuthor("");
+        setReview("");
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div>
       {selectedCard ?
@@ -45,9 +67,29 @@ export default function CardDetail() {
           </div>
           <div className="commentary-page">
             <h1>Commentaries</h1>
+            <div className="commentary-add">
+              <h1>Add a comment</h1>
+              <form onSubmit={addCommentary}>
+                <input
+                  type="text"
+                  name="author"
+                  placeholder="Your name"
+                  value={author}
+                  onChange={(e) => setAuthor(e.target.value)}
+                />
+                <input
+                  type="text"
+                  name="review"
+                  placeholder="Your review"
+                  value={review}
+                  onChange={(e) => setReview(e.target.value)}
+                />
+                <button type="submit">Add</button>
+              </form>
+            </div>
             <div className="commentary-cards">
               {commentaries.map((review) => (
-                <Commentary key={review.id} cardData={review} />
+                <Commentary key={review.uuid} cardData={review} />
               ))}
             </div>
             <div className="commentary-cards">
