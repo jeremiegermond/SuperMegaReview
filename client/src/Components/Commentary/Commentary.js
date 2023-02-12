@@ -2,10 +2,11 @@ import React from 'react'
 import "./Commentary.css"
 
 export default function Commentary({cardData}) {
+  const reviewData = cardData.Reviews
   return (
     <div className="commentary">
-      <p>Name</p>
-      <p>Commentary</p>
+      <p>{reviewData.author}</p>
+      <p>{reviewData.review}</p>
     </div>
   );
 }

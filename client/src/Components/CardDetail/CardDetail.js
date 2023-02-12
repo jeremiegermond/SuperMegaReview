@@ -8,7 +8,6 @@ import Commentary from "../Commentary/Commentary";
 export default function CardDetail() {
   const { id } = useParams();
   const selectedCard = cardData.find(card => card.id === Number(id));
-  console.log(selectedCard)
 
   return (
     <div>
@@ -16,7 +15,7 @@ export default function CardDetail() {
         <div>
           <div className="film-review">
             <div className="film-review-left">
-              <img src="/batman.jpg" alt={selectedCard.title} />
+              <img src={selectedCard.cover} alt={selectedCard.title} />
               <h1>{selectedCard.title}</h1>
               <h3>Rating: {selectedCard.rating}<FaStar className="card-star" /></h3>
             </div>
