@@ -1,3 +1,35 @@
 .about-page {
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 20%;
+}
 
+.about-page h1 {
+    text-align: center;
+}
+
+.about-page h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-page .links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.link {
+    color: #0077b6;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about-page div {
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    margin-bottom: 20px;
 }

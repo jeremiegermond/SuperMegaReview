@@ -4,7 +4,7 @@ import "./Home.css"
 export default function Home() {
   return (
     <div className="home-container">
-      <h1 className="home-title">Notre jeu du moment :</h1>
+      <h1 className="home-title">Checkout this game!</h1>
       <div className="home-mid">
         <div className="game-image"></div>
         <div className="game-writing">

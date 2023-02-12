@@ -1,6 +1,7 @@
 import {Routes, Route, BrowserRouter} from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
+import CardDetail from "./Components/CardDetail/CardDetail";
 
 import Home from "./Home/Home"
 import Reviews from "./Reviews/Reviews";
@@ -15,6 +16,7 @@ export default function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/reviews" element={<Reviews />} />
         <Route exact path="/about" element={<About />} />
+        <Route path="/detail/:id" element={<CardDetail />}/>
       </Routes>
     </BrowserRouter>
   );
