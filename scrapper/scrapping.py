@@ -76,6 +76,7 @@ def parse_data(html_parsed, count):
                     else:
                         Stars += f"{a.text} "
             dict_movie = {
+                "id": count,
                 "certificate": certificate,
                 "runtime": runtime,
                 "genre": genre,
