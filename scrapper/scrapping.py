@@ -16,18 +16,14 @@ def get_reviews(reference):
     rev_html = BeautifulSoup(res, 'html.parser')
     count = random.randint(8, 13)
     flag = 0
-    reviews = {}
+    reviews = []
     author_list = []
     for a in rev_html.find("div", {"class": "lister-list"}).find_all("div"):
         try:
             author = a.find("span", {"class": "display-name-link"}).text
             if author not in author_list:
                 review = a.find("div", {"class": "content"}).find("div", {"class" : "text"}).text
-                reviews[flag] = {
-                   "id": flag,
-                   "author": author,
-                   "review": review 
-                }
+                reviews.append({"id": flag,"author": author,"review": review })
                 if flag > count:
                     return reviews
                 flag+=1
