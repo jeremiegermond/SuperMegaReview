@@ -7,7 +7,7 @@ export default function Card({cardData}) {
   return (
     <Link className="card" to={`/detail/${cardData.id}`}>
       <div className="top-card">
-        <img src={cardData.image} alt={cardData.title} />
+        <img src="/batman.jpg" alt={cardData.title} />
       </div>
       <div className="bottom-card">
         <p className="bottom-title">{cardData.title}</p>

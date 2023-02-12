@@ -27,3 +27,15 @@
     font-size: 22px;
     margin-top: 20px;
 }
+
+.commentary-page {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commentary-cards {
+    width: 100%;
+}
