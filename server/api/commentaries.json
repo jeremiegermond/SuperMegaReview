@@ -5,7 +5,8 @@
         "text": "This is a comment",
         "user": {
             "id": 1,
-            "name": "John Doe"
+            "name": "John Doe",
+            "picture": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cute-cat-photos-1593441022.jpg?crop=0.670xw:1.00xh;0.167xw,0&resize=640:*"
         }
         },
         {
@@ -13,7 +14,8 @@
         "text": "This is another comment",
         "user": {
             "id": 2,
-            "name": "Jane Doe"
+            "name": "Jane Doe",
+            "picture": "https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"
         }
         }
     ]
