@@ -16,6 +16,10 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   const commentary = req.body;
   // add uuid
+  if (!commentary.author || !commentary.review) {
+    res.status(400).json({ msg: 'Please include a author and review' });
+    return;
+  }
   commentary.uuid = uuidv4();
   commentaries["commentaries"].push(commentary);
   fs.writeFile('./api/commentaries.json', JSON.stringify(commentaries, null, 2)

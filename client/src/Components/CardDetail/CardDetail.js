@@ -77,8 +77,7 @@ export default function CardDetail() {
                   value={author}
                   onChange={(e) => setAuthor(e.target.value)}
                 />
-                <input
-                  type="text"
+                <textarea
                   name="review"
                   placeholder="Your review"
                   value={review}
