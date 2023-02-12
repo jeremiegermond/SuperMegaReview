@@ -37,13 +37,13 @@ export default function CardDetail() {
           <div className="commentary-page">
             <h1>Commentaries</h1>
             <div className="commentary-cards">
-              {cardData.map((card) => (
-                <Commentary key={card.id} cardData={card} />
+              {selectedCard.Reviews.map((review) => (
+                <Commentary key={review.id} cardData={review} />
               ))}
             </div>
           </div>
         </div> : (
-        <p>Card not found</p>
+        <p>Card not found :/</p>
       )}
     </div>
   );

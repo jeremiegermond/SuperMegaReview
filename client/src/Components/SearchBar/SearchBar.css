@@ -1,0 +1,13 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.bar {
+    width: 20%;
+    border: 1px solid black;
+    padding: 10px;
+    background: transparent;
+    border-radius: 10px;
+}
