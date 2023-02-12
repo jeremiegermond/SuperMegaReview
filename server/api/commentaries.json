@@ -1,0 +1,20 @@
+{
+    "commentaries": [
+        {
+        "id": 0,
+        "text": "This is a comment",
+        "user": {
+            "id": 1,
+            "name": "John Doe"
+        }
+        },
+        {
+        "id": 1,
+        "text": "This is another comment",
+        "user": {
+            "id": 2,
+            "name": "Jane Doe"
+        }
+        }
+    ]
+}

@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 // Start example
 app.use(bodyParser.json());
 
-app.get('/api', (req, res) => {
-  res.json({ message: 'Hello from server!' });
-});
+const api = require('./api');
 
-app.listen(3001, () => console.log('Server running on localhost:3001'));
+app.use('/api', api);
+
+app.listen(3001, () => console.log('Server running on http://localhost:3001'));

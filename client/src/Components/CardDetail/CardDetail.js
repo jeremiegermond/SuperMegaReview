@@ -2,13 +2,21 @@ import { useParams } from 'react-router-dom';
 import "./CardDetail.css"
 import cardData from "../../Data/scrapped_data.json"
 import { FaStar } from 'react-icons/fa';
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Commentary from "../Commentary/Commentary";
 
 export default function CardDetail() {
   const { id } = useParams();
   const selectedCard = cardData.find(card => card.id === Number(id));
   console.log(selectedCard)
+  const [commentaries, setCommentaries] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/commentaries/${id}`)
+      .then((res) => res.json())
+      .then((data) => setCommentaries(data))
+      .catch((err) => console.log(err));
+  }, [id]);
 
   return (
     <div>
@@ -38,8 +46,11 @@ export default function CardDetail() {
           <div className="commentary-page">
             <h1>Commentaries</h1>
             <div className="commentary-cards">
-              {cardData.map((card) => (
-                <Commentary key={card.id} cardData={card} />
+              {commentaries.map((commentary) => (
+                <Commentary
+                  key={commentary.id}
+                  cardData={commentary}
+                />
               ))}
             </div>
           </div>
