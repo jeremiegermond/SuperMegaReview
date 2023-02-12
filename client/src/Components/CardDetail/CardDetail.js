@@ -1,34 +1,20 @@
 import { useParams } from 'react-router-dom';
 import "./CardDetail.css"
-
+import cardData from "../../Data/scrapped_data.json"
 import { FaStar } from 'react-icons/fa';
 import React from "react";
 
 export default function CardDetail() {
   const { id } = useParams();
-  const cardData = [
-    {
-      id: 1,
-      title: 'Batman',
-      image: '/batman.jpg',
-      rating: 4.5
-    },
-    {
-      id: 2,
-      title: 'Spider-Man',
-      image: '/spider-man.jpg',
-      rating: 4.7
-    },
-    // Add more card data here
-  ];
   const selectedCard = cardData.find(card => card.id === Number(id));
+  console.log(selectedCard)
 
   return (
     <div>
       {selectedCard ? (
         <div className="film-review">
           <div className="film-review-left">
-            <img src={selectedCard.image} alt={selectedCard.title} />
+            <img src="/batman.jpg" alt={selectedCard.title} />
             <h1>{selectedCard.title}</h1>
             <h3>Rating: {selectedCard.rating}<FaStar className="card-star" /></h3>
           </div>
