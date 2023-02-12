@@ -16,9 +16,12 @@
     width: 60%;
 }
 
-.game-image {
+.home-image {
     width: 45%;
-    border: 1px solid red;
+}
+
+.game-image {
+    width: 100%;
     height: 50vh;
     cursor: pointer;
     transition: 0.3s ease;
